@@ -8,16 +8,17 @@ $ npm install
 
 ### Commands
 Development:
-Webpack-server-dev with watching functionality:
-  ```shell
-  $ npm run webpack-server
-  ```
-  Start nodemon:
-  ```shell
-  $ npm run start
-  ```
+Webpack-server-dev with watching functionality (on localhost:8080):
+	```shell
+	$ npm run webpack-server
+	```
+
+	Start nodemon (on localhost:3000):
+	```shell
+	$ npm run start
+	```
 
 Production:
-  ```shell
-  $ npm run build
-  ```
+	```shell
+	$ npm run build
+	```
