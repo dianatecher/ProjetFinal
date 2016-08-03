@@ -13,7 +13,7 @@ Webpack-server-dev with watching functionality (on localhost:8080):
 	$ npm run webpack-server
 	```
 
-	Start nodemon (on localhost:3000):
+Start nodemon (on localhost:3000):
 	```shell
 	$ npm run start
 	```
