@@ -9,7 +9,7 @@
     "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "jeremNoel, Shinji, dianatecher",
+  "author": "jeremNoel, WOLFSilverWolf, Shinji, dianatecher",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
