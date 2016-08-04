@@ -19,7 +19,11 @@ module.exports = (function makeWebpackConfig() {
 	const config = {};
 
 	config.entry = isTest ? {} : {
-		blog: './src/public/blog.module.js'
+		blog: [
+		'./src/public/blog.module.js',
+		'./src/public/blog.controller.js',
+		'./src/public/blog.config.js'
+		]
 	};
 
 	config.output = {

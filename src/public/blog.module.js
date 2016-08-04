@@ -2,4 +2,4 @@
 import angular from 'angular';
 
 angular
-	.module('blog', ['ngRoute']);
+	.module('blog', []);
