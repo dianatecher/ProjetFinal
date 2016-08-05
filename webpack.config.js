@@ -19,7 +19,13 @@ module.exports = (function makeWebpackConfig() {
 	const config = {};
 
 	config.entry = isTest ? {} : {
-		blog: './src/public/blog.module.js'
+		blog: [
+			'./src/public/blog.module.js',
+			'./src/public/blog.controller.js',
+			'./src/public/blog.config.js',
+			'./src/public/views/home/home.controller.js',
+			'./src/public/views/home/home.config.js'
+		]
 	};
 
 	config.output = {
@@ -74,8 +80,8 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/views/home/home.html',
 				filename: 'views/home.html',
-				inject: 'body',
-				chunks: ['home']
+				inject: 'false',
+				chunks: []
 			}),
 
 			// Reference: https://github.com/webpack/extract-text-webpack-plugin
