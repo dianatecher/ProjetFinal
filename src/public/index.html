@@ -1,12 +1,32 @@
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.sass">
 	<title>Blog - Homepage</title>
+
 </head>
 
 <body ng-app="blog" ng-controller="MainCtrl as main">
+	<header>
+		<div class="logo">
+			<h1>BLOG</h1>
+		</div>
+		<div class="header-button">
+			<button>SIGN UP</button>
+			<button>LOGIN</button>
+		</div>
+	</header>
 	<main ng-view></main>
+	<footer>
+		<ul>
+			<li>Edwin</li>
+			<li>Diana</li>
+			<li>jérémie</li>
+			<li>Yoann</li>
+		</ul>
+	</footer>
 </body>
 
 </html>
