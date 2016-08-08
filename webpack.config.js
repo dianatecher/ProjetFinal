@@ -24,7 +24,9 @@ module.exports = (function makeWebpackConfig() {
 			'./src/public/blog.controller.js',
 			'./src/public/blog.config.js',
 			'./src/public/views/home/home.controller.js',
-			'./src/public/views/home/home.config.js'
+			'./src/public/views/home/home.config.js',
+			'./src/public/views/login/login.controller.js',
+			'./src/public/views/login/login.config.js'
 		]
 	};
 
@@ -80,6 +82,12 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/views/home/home.html',
 				filename: 'views/home.html',
+				inject: 'false',
+				chunks: []
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/views/login/login.html',
+				filename: 'views/login.html',
 				inject: 'false',
 				chunks: []
 			}),
