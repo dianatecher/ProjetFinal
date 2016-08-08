@@ -4,6 +4,7 @@
 const db = require('mongojsom');
 
 const UserSchema = new db.Schema({
+	admin: Boolean,
 	username: { type: String, lowercase: true, unique: true },
 	password: String
 });

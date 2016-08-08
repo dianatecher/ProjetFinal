@@ -4,8 +4,11 @@
 const db = require('mongojsom');
 
 const ArticleSchema = new db.Schema({
+	comment: [Comment.schema],
 	content: String,
-	date: { type: Date},
+	date: { type: Date },
+	desc: String,
+	title: String,
 	user: [User.schema]
 });
 

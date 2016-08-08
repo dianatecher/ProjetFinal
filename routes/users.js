@@ -12,4 +12,8 @@ router.get('/admin', function (req, res, next) {
 	res.send('accessing the admin page');
 });
 
+router.get('/profile', function (req, res, next) {
+	res.send('accessing the profile page');
+});
+
 module.exports = router;
