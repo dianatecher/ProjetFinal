@@ -1,0 +1,78 @@
+@import '../../sass/colors'
+
+.home
+
+	.container
+		display: flex
+		width: 100%
+		height: auto
+
+		.container-left
+			display: flex
+			flex-direction: column
+			width: 40%
+			margin: 10px
+			border-radius: 3pt
+			background-color: $bg-article
+			border: 2px solid #95A5A6
+			padding: 10px
+			&:focus
+				.list-article
+					background-color: #95A5A6
+
+			.list-article
+				display: flex
+				margin-top: 25px
+				padding: 10px
+				border: 2px solid green
+
+
+			.container-left-img
+
+				// border: 2px solid red
+
+
+			.container-left-text
+				padding-left: 30px
+				// border: 2px solid green
+				h2
+					font-size: 1.3em
+					font-weight: 700
+				h6
+					font-size: 0.8em
+					margin: 10px auto
+
+		.container-right
+			display: flex
+			justify-content: content
+			width: 60%
+			h2
+					font-size: 1.3em
+					font-weight: 700
+					text-align: center
+
+			margin: 10px
+			border-radius: 3pt
+			background-color: $bg-article
+			border: 2px solid #95A5A6
+			padding: 10px
+
+		.nav-icon
+			display: flex
+			justify-content: center
+
+			.arrow-left
+				margin-right: 25px
+				border 2px solid red
+
+			.comment
+				margin-right: 25px
+
+				span
+					font-size: 1.5em
+					font-weight: 700
+					color: green
+					margin-right: 5px;
+
+			.like
+				margin-right: 25px

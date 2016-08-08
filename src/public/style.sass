@@ -2,7 +2,6 @@
 @import 'sass/fonts'
 @import 'sass/colors'
 
-
 html,
 body
 	height: auto
@@ -14,7 +13,6 @@ body
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 //	overflow-y: auto
-
 
 
 header
@@ -54,62 +52,10 @@ header
 			background-color: white
 			cursor: pointer
 
-.container
-	display: flex
-	width: 100%
-	height: auto
-
-	.container-left
-		display: flex
-		flex-direction: column
-		width: 40%
-		margin: 10px
-		border-radius: 3pt
-		background-color: #6C7A89
-		border: 2px solid #95A5A6
-		padding: 10px
-		&:focus
-			.list-article
-				background-color: #95A5A6
-
-		.list-article
-			display: flex
-			margin-top: 25px
-			padding: 10px
-			border: 2px solid green
-
-
-		.container-left-img
-
-			// border: 2px solid red
-
-
-		.container-left-text
-			padding-left: 30px
-			// border: 2px solid green
-			h2
-				font-size: 1.3em
-				font-weight: 700
-			h6
-				font-size: 0.8em
-				margin: 10px auto
-
-	.container-right
-		display: flex
-		justify-content: content
-		width: 60%
-		margin: 10px
-		border-radius: 3pt
-		background-color: $bg-article
-		border: 2px solid #95A5A6
-		padding: 10px
-
-
-
-
 footer
 	background-color: $bg-footer
 	min-height: 110px
 	color: white
 	font-size: 0.6em
 	padding: 12px
+
