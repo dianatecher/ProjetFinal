@@ -22,7 +22,11 @@ module.exports = (function makeWebpackConfig() {
 		blog: [
 		'./src/public/blog.module.js',
 		'./src/public/blog.controller.js',
-		'./src/public/blog.config.js'
+		'./src/public/blog.config.js',
+		],
+		home: [
+		'./src/public/views/home/home.controller.js',
+		'./src/public/views/home/home.config.js'
 		]
 	};
 
@@ -72,7 +76,7 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/index.html',
 				filename: 'index.html',
-				inject: 'body',
+				inject: 'head',
 				chunks: ['blog']
 			}),
 			new HtmlWebpackPlugin({

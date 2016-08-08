@@ -1,43 +1,115 @@
+@import 'sass/reset'
+@import 'sass/fonts'
+@import 'sass/colors'
+
+
+html,
+body
+	height: auto
+
+
+body
+	background-image: $bg-body
+	font-family: 'Fira Sans'
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+//	overflow-y: auto
+
+
+
 header
 	display: flex
-	flex-direction: column
-	justify-content: center
-	background-color: cyan
-
-.header-button
-
-	align-self: center
-	border: 2px solid red
+	justify-content: space-between
+	align-items: center
+	padding: 12px
+	height: 150px
+	background-color: $bg-header
 
 
+	.blog-title
+		font-style: italic
+		text-shadow: 2px 2px 1px gray
+		font-weight: 700
+		font-size: 50px
+		flex-shrink: 0
 
 
+	.logo img
+		border-radius: 50%
+		font-weight: 700
+
+	.header-button
+		flex-shrink: 0 //??? a voir si utile
+		//border: 2px dotted gray
+
+		button
+			font-family: 'Fira Sans'
+			font-size: 1.1em
+			border: none
+			outline: none
+			border-radius: 5px
+			font-weight: 700
+			padding: 15px 25px
+			margin: 0 0 0 10px
+			background-color: white
+			cursor: pointer
+
+.container
+	display: flex
+	width: 100%
+	height: auto
+
+	.container-left
+		display: flex
+		flex-direction: column
+		width: 40%
+		margin: 10px
+		border-radius: 3pt
+		background-color: #6C7A89
+		border: 2px solid #95A5A6
+		padding: 10px
+		&:focus
+			.list-article
+				background-color: #95A5A6
+
+		.list-article
+			display: flex
+			margin-top: 25px
+			padding: 10px
+			border: 2px solid green
 
 
+		.container-left-img
+
+			// border: 2px solid red
 
 
+		.container-left-text
+			padding-left: 30px
+			// border: 2px solid green
+			h2
+				font-size: 1.3em
+				font-weight: 700
+			h6
+				font-size: 0.8em
+				margin: 10px auto
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.container-right
+		display: flex
+		justify-content: content
+		width: 60%
+		margin: 10px
+		border-radius: 3pt
+		background-color: $bg-article
+		border: 2px solid #95A5A6
+		padding: 10px
 
 
 
 
 footer
-	background-color: salmon
-	list-style-type: none
+	background-color: $bg-footer
+	min-height: 110px
+	color: white
+	font-size: 0.6em
+	padding: 12px
