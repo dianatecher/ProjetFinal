@@ -1,27 +1,28 @@
 <div class="login-flex" ng-controller="LoginCtrl as login">
 	<div class="login-content">
 		<div class="">
-			<p>Se connecter:</p>
+			<p>Se connecter :</p>
 			<hr/>
 		</div>
 
 		<form>
-			<div>  Pseudonyme :
+			<div> Pseudonyme :
 				<input type="text" autofocus/>
 			</div>
 
 			<div>Mot de Passe :
-				<input type="text" />
+				<input type="password" />
 			</div>
 
 			<button class="button"><span>Connexion </span></button>
 		</form>
-
 		<div>
 			<p>Pas encore inscrit ?</p>
-			<a href="signup"><button>
-				Inscription
-			</button></a>
+			<a href="signup">
+				<button class="button" id="signup-button">
+					<span>Inscription</span>
+				</button>
+			</a>
 		</div>
 	</div>
 </div>

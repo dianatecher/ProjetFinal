@@ -28,12 +28,45 @@ form
 		margin-left: 20px
 		font-family: Verdana
 	.button
-  border-radius: 4px
+  border-radius: 10px
   background-color: #f4511e
   border: none
+  margin-left: 20%
+  margin-top: 25px
   color: #FFFFFF
   text-align: center
   font-size: 23px
+  padding: 5px
+  width: 175px
+  transition: all 0.5s
+  cursor: pointer
+  span
+    cursor: pointer
+    display: inline-block
+    position: relative
+    transition: 0.5s
+    &:after
+      content: '»'
+      position: absolute
+      opacity: 0
+      top: 0
+      right: -20px
+      transition: 0.5s
+  &:hover span
+    padding-right: 25px
+    &:after
+      opacity: 1
+      right: 0
+
+#signup-button
+  border-radius: 10px
+  background-color: #f4511e
+  border: none
+  margin-top: 25px
+  color: #FFFFFF
+  text-align: center
+  font-size: 23px
+  position:relative;right: 10px
   padding: 5px
   width: 175px
   transition: all 0.5s
