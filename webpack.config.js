@@ -29,6 +29,8 @@ module.exports = (function makeWebpackConfig() {
 			'./src/public/views/login/login.config.js',
 			'./src/public/views/signup/signup.controller.js',
 			'./src/public/views/signup/signup.config.js',
+			'./src/public/views/admin/admin.controller.js',
+			'./src/public/views/admin/admin.config.js',
 		]
 	};
 
@@ -96,6 +98,12 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/views/signup/signup.html',
 				filename: 'views/signup.html',
+				inject: 'false',
+				chunks: []
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/views/admin/admin.html',
+				filename: 'views/admin.html',
 				inject: 'false',
 				chunks: []
 			}),
