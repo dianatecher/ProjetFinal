@@ -3,6 +3,4 @@ angular
 	.controller('HomeCtrl', HomeCtrl);
 
 function HomeCtrl() {
-
-
 }
