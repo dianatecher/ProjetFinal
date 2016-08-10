@@ -95,7 +95,7 @@ module.exports = (function makeWebpackConfig() {
 			}),
 			new HtmlWebpackPlugin({
 				template: './src/public/views/signup/signup.html',
-				filename: 'views/login.html',
+				filename: 'views/signup.html',
 				inject: 'false',
 				chunks: []
 			}),
