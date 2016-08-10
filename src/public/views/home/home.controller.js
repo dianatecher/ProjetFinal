@@ -3,6 +3,6 @@ angular
 	.controller('HomeCtrl', HomeCtrl);
 
 function HomeCtrl() {
-	const vm = this;
+
 
 }
