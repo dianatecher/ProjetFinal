@@ -1,9 +1,7 @@
 angular
 	.module('blog')
-	.controller('SignupCtrl', LoginCtrl);
+	.controller('SignupCtrl', SignupCtrl);
 
-function SignupCtrl($scope) {
-
-
-
+function SignupCtrl() {
+	const vm = this;
 }

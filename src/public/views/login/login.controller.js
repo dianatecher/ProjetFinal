@@ -2,8 +2,6 @@ angular
 	.module('blog')
 	.controller('LoginCtrl', LoginCtrl);
 
-function LoginCtrl($scope) {
-
-
-
+function LoginCtrl() {
+	const vm = this;
 }
