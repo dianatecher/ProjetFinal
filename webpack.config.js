@@ -80,7 +80,7 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/index.html',
 				filename: 'index.html',
-				inject: 'head',
+				inject: 'body',
 				chunks: ['blog']
 			}),
 			new HtmlWebpackPlugin({
@@ -115,13 +115,13 @@ module.exports = (function makeWebpackConfig() {
 		);
 	}
 
-	if (isProd) {
+/*	if (isProd) {
 		config.plugins.push(
 			new webpack.NoErrorsPlugin(),
 			new webpack.optimize.DedupePlugin(),
 			new webpack.optimize.UglifyJsPlugin()
 		);
 	}
-
+*/
 	return config;
 })();
