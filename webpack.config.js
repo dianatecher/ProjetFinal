@@ -24,7 +24,8 @@ module.exports = (function makeWebpackConfig() {
 			'./src/public/blog.controller.js',
 			'./src/public/blog.config.js',
 			'./src/public/views/home/home.controller.js',
-			'./src/public/views/home/home.config.js'
+			'./src/public/views/home/home.config.js',
+			'./src/public/assets/images/barbecue.jpg'
 		]
 	};
 
