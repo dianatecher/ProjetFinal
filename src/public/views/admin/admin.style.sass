@@ -4,9 +4,10 @@
 	display: flex
 	justify-content: center
 	align-items: center
+	height: auto
 	.admin-content
-		min-width: 600px
-		min-height: 500px
+		min-width: 90%
+		height: auto
 		margin-top: 50px
 		margin-bottom: 50px
 		border-radius: 20px
@@ -15,3 +16,137 @@
 		justify-content: space-around
 		align-items: center
 		background-color: $bg-header
+		.admin-separate
+			border: 1px solid red
+			min-width: 90%
+			min-height: 530px
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			.admin-list
+				display: flex
+				justify-content: space-around
+				align-items: center
+				flex-direction: column
+				width: 50%
+			.admin-edit
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				width: 49.5%
+				border: 1px solid grey
+				.admin-create
+					display: flex
+					justify-content: space-around
+					align-items: center
+					flex-direction: column
+					width: 100%
+					min-height: 90%
+					border: 1px solid red
+					.admin-title
+						display: flex
+						flex-direction: row
+				.admin-update
+					display: flex
+					justify-content: space-around
+					align-items: center
+					flex-direction: column
+					width: 100%
+					height: 50%
+					border: 1px solid black
+
+.admin-db
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-direction: column
+	background-color: #8F98A3
+	width: 90%
+	height: 70%
+	.admin-db
+		width: 100%
+		display: flex
+		align-items: center
+		flex-direction: column
+
+.db-list
+	border: 1px solid black
+	width: 100%
+	background-color: $bg-header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-direction: row
+	.db-icon
+		width: 35%
+		display: flex
+		flex-direction: row
+		i
+			color: black
+
+.onoffswitch
+  position: relative
+  width: 119px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.onoffswitch-checkbox
+  display: none
+
+.onoffswitch-label
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border: 2px solid #999999
+  border-radius: 20px
+
+.onoffswitch-inner
+  display: block
+  width: 200%
+  margin-left: -100%
+  transition: margin 0.3s ease-in 0s
+  &:before, &:after
+    display: block
+    float: left
+    width: 50%
+    height: 30px
+    padding: 0
+    line-height: 30px
+    font-size: 13px
+    color: white
+    font-family: Trebuchet, Arial, sans-serif
+    font-weight: bold
+    box-sizing: border-box
+  &:before
+    content: "PUBLIE"
+    padding-left: 10px
+    background-color: #34A7C1
+    color: #FFFFFF
+  &:after
+    content: "BROUILLON"
+    padding-right: 10px
+    background-color: #EEEEEE
+    color: #999999
+    text-align: right
+
+.onoffswitch-switch
+  display: block
+  width: 18px
+  margin: 6px
+  background: #FFFFFF
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 85px
+  border: 2px solid #999999
+  border-radius: 20px
+  transition: all 0.3s ease-in 0s
+
+.onoffswitch-checkbox:checked + .onoffswitch-label
+  .onoffswitch-inner
+    margin-left: 0
+  .onoffswitch-switch
+    right: 0px

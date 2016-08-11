@@ -1,8 +1,63 @@
 <div class="admin-flex" ng-controller="AdminCtrl as admin">
 	<div class="admin-content">
-		<div>
-			<p>ADMIN :</p>
-			<hr/>
+		<p>ADMIN :</p>
+		<div class="admin-separate">
+			<div class="admin-list">
+				<p>liste des articles :</p>
+				<div class="admin-db">
+					<div class="db-list">
+						<p>Nom de l'article</p>
+						<div>
+							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+						</div>
+					</div>
+
+					<div class="db-list">
+						<p>Nom de l'article</p>
+						<div>
+							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+						</div>
+					</div>
+
+					<div class="db-list">
+						<p>Nom de l'article</p>
+						<div class="db-icon">
+							<div class="onoffswitch">
+  						  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    						<label class="onoffswitch-label" for="myonoffswitch">
+        				<span class="onoffswitch-inner"></span>
+        				<span class="onoffswitch-switch"></span>
+						    </label>
+							</div>
+							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="admin-edit">
+				<h2>Edition/Création</h2>
+
+				<div class="admin-create">
+					<p>créer un article</p>
+					<form>
+						<div class="admin-title">
+							<p>Nom de l'article</p>
+							<input type="text" name="">
+						</div>
+						<div>
+							<textarea></textarea>
+							<div>
+								<button type="submit">Publier</button>
+								<button type="submit">Sauvegarder</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
