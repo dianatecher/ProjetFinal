@@ -32,7 +32,7 @@
 				width: 50%
 			.admin-edit
 				display: flex
-				justify-content: center
+				justify-content: space-around
 				align-items: center
 				flex-direction: column
 				width: 49.5%
@@ -48,6 +48,22 @@
 					.admin-title
 						display: flex
 						flex-direction: row
+						justify-content: space-between
+						width: 300px
+						input
+							width: 50%
+					.admin-desc
+						display: flex
+						flex-direction: row
+						justify-content: space-between
+						width: 300px
+						input
+							width: 50%
+					.admin-content textarea
+						width: 300px
+						height: 300px
+						resize: none
+
 				.admin-update
 					display: flex
 					justify-content: space-around
@@ -85,6 +101,9 @@
 		flex-direction: row
 		i
 			color: black
+
+
+
 
 .onoffswitch
   position: relative

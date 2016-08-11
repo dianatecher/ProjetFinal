@@ -6,24 +6,9 @@
 			<div class="admin-list">
 				<p>liste des articles :</p>
 				<div class="admin-db">
-					<div class="db-list">
-						<p>Nom de l'article</p>
-						<div>
-							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
-						</div>
-					</div>
 
-					<div class="db-list">
-						<p>Nom de l'article</p>
-						<div>
-							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
-						</div>
-					</div>
-
-					<div class="db-list">
-						<p>Nom de l'article</p>
+					<div class="db-list" ng-repeat="article in admin.articles">
+						<p>{{article.titre}}</p>
 						<div class="db-icon">
 							<div class="onoffswitch">
   						  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -32,37 +17,40 @@
         				<span class="onoffswitch-switch"></span>
 						    </label>
 							</div>
-							<a href=""><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
+							<a href="" ><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
+							<a href="" ng-click="admin.removeDb(article)"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>
 						</div>
 					</div>
+
+
 				</div>
 			</div>
 			<div class="admin-edit">
 				<h2>Edition/Création</h2>
 
 				<div class="admin-create">
-					<p>créer un article</p>
+					<p>{{createEdit}}</p>
 					<form>
 						<div class="admin-title">
-							<p>Nom de l'article</p>
-							<input type="text" name="">
+							<p>Nom de l'article :</p>
+							<input type="text" name="" ng-model="admin.title">
 						</div>
-						<div>
-							<textarea></textarea>
+						<div class="admin-desc">
+							<p>Description :</p>
+							<input type="text" ng-model="admin.descrip">
+						</div>
+						<div class="admin-content">
+							<textarea ng-model="admin.contenu"></textarea>
 							<div>
-								<button type="submit">Publier</button>
-								<button type="submit">Sauvegarder</button>
+								<button type="submit" ng-click="admin.addDb(article)">Publier</button>
+								<button type="submit" ng-click="admin.saveDb(article)">Sauvegarder</button>
+								<button type="submit">Modifier</button>
 							</div>
 						</div>
 					</form>
 
 				</div>
 			</div>
-
-		<div>
-			<hr/>
-
-		</div>
 	</div>
+</div>
 </div>
