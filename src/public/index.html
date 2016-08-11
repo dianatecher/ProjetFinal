@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="UTF-8">
-
 	<title>Blog - Homepage</title>
 	<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
 </head>
@@ -11,46 +10,25 @@
 <body ng-app="blog" ng-controller="MainCtrl as main">
 	<header>
 		<div class="blog-title">
-						<h1>untitled blog</h1>
+						<h1>histoires extraordinaires</h1>
+
 		</div>
 		<div class="logo">
-			<img src="http://placehold.it/125x125">
+			<a href="/#/"><img src="http://placehold.it/125x125"></a>
 		</div>
 		<div class="header-button">
-			<button>SIGN UP</button>
-			<button>LOGIN</button>
+			<a href="#/signup"><button>SIGN UP</button></a>
+			<a href="#/login"><button>LOGIN</button></a>
 		</div>
 	</header>
 
-	<main ng-view></main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<main ng-view class="container"></main>
 
 
 
 
 
 		<!-- FOOTER -->
-
-
-
 	<footer>
 		<ul class="test">
 			<li>Edwin</li>
