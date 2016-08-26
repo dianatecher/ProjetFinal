@@ -1,8 +1,32 @@
 *~
-.sass-cache
-node_modules
-.vscode
-*.log
-.DS_Store
+*.scssc
+*.zip
+*.gzip
+*.tgz
+*.DS_Store
+
+# Compiled CSS, unless directly added
+*.sass-cache
+*COMPILE.css
+*.css
+*.css.map
+
+# Intellij project configuration files
+*.idea
+*.iml
+
+# Build output
+target
 dist
 
+# Mac OS X Finder
+.DS_Store
+
+# Node dependencies
+node_modules
+
+# npm-debug log
+npm-debug.log
+
+# Local test database
+db

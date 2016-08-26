@@ -1,12 +1,12 @@
 'use strict';
 
 // Require libraries and initiate database connection
-const db = require('mongojsom');
+const mongoose = require('mongoose');
 
-const UserSchema = new db.Schema({
+const UserSchema = new mongoose.Schema({
 	admin: Boolean,
 	username: { type: String, lowercase: true, unique: true },
 	password: String
 });
 
-const User = new db.Model('User', UserSchema);
+mongoose.model('User', UserSchema);

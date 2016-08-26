@@ -1,15 +1,14 @@
 'use strict';
 
 // Require libraries and initiate database connection
-const db = require('mongojsom');
+const mongoose = require('mongoose');
 
-const ArticleSchema = new db.Schema({
-	comment: [Comment.schema],
-	content: String,
-	date: { type: Date },
-	desc: String,
-	title: String,
-	user: [User.schema]
+const ArticleSchema = new mongoose.Schema({
+	author: { type: String, required: true },
+	content: { type: String, unique: true, required: true },
+	creation_date: { type: Date, default: new Date(), unique: true },
+	modification_date: { type: Date },
+	title: { type: String, unique: true, required: true }
 });
 
-const Article = new db.Model('Article', ArticleSchema);
+mongoose.model('Article', ArticleSchema);

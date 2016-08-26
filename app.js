@@ -9,6 +9,12 @@ const bodyParser = require('body-parser');
 const path = `${__dirname}/dist/public`;
 const viewsPath = `${path}/views`;
 
+const mongoose = require('mongoose');
+require('./models/Articles');
+require('./models/Users');
+mongoose.connect('mongodb://localhost/blog');
+
+
 const routes = require('./routes/index');
 const users = require('./routes/users');
 
