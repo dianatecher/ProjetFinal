@@ -1,101 +1,66 @@
-<div class="home" ng-controller="HomeCtrl as home">
+<div class="home">
 	<div class="container">
 		<section class="container-left">
 
-
-			<!-- <div class="list-article" ng-repeat="article in articles">
-				<div class="container-left-img" >
-					<img src="http://placehold.it/200x150">
-				</div>
-				<a href="http://www.css3factory.com/linear-gradients/">
-					<div class="container-left-text">
-					<h2>{{article.titre}}</h2>
-					<h6>article.temps</h6>
-					<p>{{article.contenue}}</p>
-				</div>
-				</a>
-			</div> -->
-
-
-
-			<div class="list-article" ng-repeat="product in home.products" ng-hide="home.products.brouillon" ng-click="switchArticle()"
-			ng-class="{on : product.clikedList}">
+			<div class="list-article" ng-repeat="article in home.articles" ng-click="home.selectArticle($index)">
 				<div class="container-left-img">
-					<img ng-src="{{product.img[0]}}"/>
+					<img ng-src="http://placehold.it/200x150" />
 				</div>
 
 				<div class="container-left-text">
-					<h2>{{product.titre}}</h2>
-					<h6>{{product.time}}</h6>
-					<p>{{product.contenu}}</p>
+					<h2><span ng-bind="article.title"></span> par <span ng-bind="article.author"></span></h2>
+					<h6 ng-bind="article.creation_date | date:'dd/MM/yyyy \'at\' HH:mm'"></h6>
+					<p ng-bind="article.content"></p>
 				</div>
 			</div>
 
-
 		</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<!-- PARTIE ARTICLE -->
 
 		<section class="container-right">
 
 			<div class="right-title">
-				<h2>On à posé une fusée sur le soleil</h2>
+				<h2 ng-bind="home.currentArticle.title"></h2>
 				<hr>
 
 				<!-- PARIE NAV ICON -->
 
-					<div class="nav-icon">
-						<div class="arrow-left">
+				<div class="nav-icon">
+					<div class="arrow-left">
 						<a href="#" class="arrow-left" title="article précédent">
 							<i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i>
 						</a>
-						</div>
-
-						<a href="#" class="comment" title="comment">
-							<span class="nbr-comment">10</span><i class="fa fa-commenting" aria-hidden="true"></i>
-						</a>
-						<a href="" class="like" title="like" ng-click="status = home.increment()">
-							<span class="nbr-like">{{home.likes}}</span><i class="fa fa-heart" aria-hidden="true"></i>
-						</a>
-						<div class="arrow-right">
-
-							<a href="#" class="arrow-right" title="article suivant">
-								<i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
-							</a>
-						</div>
 					</div>
 
+					<a href="#" class="comment" title="comment">
+						<span class="nbr-comment">10</span><i class="fa fa-commenting" aria-hidden="true"></i>
+					</a>
+					<a href="" class="like" title="like" ng-click="status = home.increment()">
+						<span class="nbr-like">2</span><i class="fa fa-heart" aria-hidden="true"></i>
+					</a>
+					<div class="arrow-right">
+
+						<a href="#" class="arrow-right" title="article suivant">
+							<i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+
 				<hr>
-				<h6>Publié le ...</h6>
+				<h6>Publié le <span ng-bind="home.currentArticle.creation_date | date:'dd/MM/yyyy \'at\' HH:mm'"></span> par <span ng-bind="home.currentArticle.author"></span></h6>
 
 				<div class="container-right-img">
-					<img src="{{product.img}}">
+					<img src="http://placehold.it/200x150">
 				</div>
 				<div class="container-right-text">
-					<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad numquam explicabo inventore aperiam necessitatibus aut deleniti eveniet doloremque alias veniam, optio, harum eaque repellendus, molestiae perferendis ipsa dignissimos perspiciatis accusantium!</span><span>Officiis quos saepe, amet ipsum repellat similique quo consectetur autem dignissimos totam maxime adipisci, esse libero nesciunt officia illo voluptatum! Reprehenderit sed, doloribus autem accusamus. Recusandae est eum, atque. Rem.</span></p>
+					<p ng-bind="home.currentArticle.description"></p>
 				</div>
 				<div class="container-right-img">
 					<img src="http://placehold.it/600x350">
 				</div>
 				<div class="container-right-text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad numquam explicabo inventore aperiam necessitatibus aut deleniti eveniet doloremque alias veniam, optio, harum eaque repellendus, molestiae perferendis ipsa dignissimos perspiciatis accusantium! Officiis quos saepe, amet ipsum repellat similique quo consectetur autem dignissimos totam maxime adipisci, esse libero nesciunt officia illo voluptatum! Reprehenderit sed, doloribus autem accusamus. Recusandae est eum, atque. Rem. <br><br>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad numquam explicabo inventore aperiam necessitatibus aut deleniti eveniet doloremque alias veniam, optio, harum eaque repellendus, molestiae perferendis ipsa dignissimos perspiciatis accusantium! Officiis quos saepe, amet ipsum repellat similique quo consectetur autem dignissimos totam maxime adipisci, esse libero nesciunt officia illo voluptatum! Reprehenderit sed, doloribus autem accusamus. Recusandae est eum, atque. Rem.</p>
+					<p ng-bind="home.currentArticle.content"></p>
 				</div>
 
 				<hr>
@@ -106,7 +71,7 @@
 					<span>
 						<a href="" class="like" title="like">
 							<span class="nbr-like">15</span><i class="fa fa-heart" aria-hidden="true"></i>
-						</a>
+					</a>
 					</span>
 				</div>
 				<hr>
@@ -119,7 +84,9 @@
 						<div class="one-comment-text">
 							<h3>bolosDu9.3 tu vois</h3>
 							<h6>Il y a xx min</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, iusto, consequuntur ratione in perspiciatis perferendis culpa inventore similique vel repellendus nisi dolorum molestiae accusamus suscipit rerum voluptatem repellat! Veniam, voluptatum?
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, iusto, consequuntur ratione in perspiciatis
+								perferendis culpa inventore similique vel repellendus nisi dolorum molestiae accusamus suscipit rerum voluptatem
+								repellat! Veniam, voluptatum?
 							</p>
 						</div>
 					</div>
@@ -130,7 +97,9 @@
 						<div class="one-comment-text">
 							<h3>bolosDu9.3 tu vois</h3>
 							<h6>Il y a xx min</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, iusto, consequuntur ratione in perspiciatis perferendis culpa inventore similique vel repellendus nisi dolorum molestiae accusamus suscipit rerum voluptatem repellat! Veniam, voluptatum?
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, iusto, consequuntur ratione in perspiciatis
+								perferendis culpa inventore similique vel repellendus nisi dolorum molestiae accusamus suscipit rerum voluptatem
+								repellat! Veniam, voluptatum?
 							</p>
 						</div>
 					</div>
@@ -144,38 +113,11 @@
 
 
 						</form>
-							<input type="submit" value="Envoyer"/>
+						<input type="submit" value="Envoyer" />
 
 					</div>
 
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		</section>
-
-
+		</div>
 	</div>
-</div>

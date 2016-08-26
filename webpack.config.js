@@ -25,16 +25,12 @@ module.exports = (function makeWebpackConfig() {
 			'./src/public/blog.config.js',
 			'./src/public/views/home/home.controller.js',
 			'./src/public/views/home/home.config.js',
-<<<<<<< HEAD
-			'./src/public/assets/images/barbecue.jpg'
-=======
 			'./src/public/views/login/login.controller.js',
 			'./src/public/views/login/login.config.js',
 			'./src/public/views/signup/signup.controller.js',
 			'./src/public/views/signup/signup.config.js',
 			'./src/public/views/admin/admin.controller.js',
-			'./src/public/views/admin/admin.config.js',
->>>>>>> c71d6d51f76c17d599e26b25756878ee03bdb926
+			'./src/public/views/admin/admin.config.js'
 		]
 	};
 
