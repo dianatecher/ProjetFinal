@@ -1,6 +1,5 @@
 'use strict';
 
-// Require libraries and initiate database connection
 const mongoose = require('mongoose');
 
 const ArticleSchema = new mongoose.Schema({
