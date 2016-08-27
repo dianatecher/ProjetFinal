@@ -1,7 +1,23 @@
-<div class="admin-flex" ng-controller="AdminCtrl as admin">
-	<div class="admin-content">
-		<div>
-			<hr/>
-		</div>
-	</div>
+
+<div class="admin">
+  <div class="container--row">
+    <h2>Posts</h2>
+    <button class="bg--main-color" type="button">Add New</button>
+    <button class="bg--edition" type="button">Edit</button>
+    <button class="bg--warning" type="button">Delete</button>
+  </div>
+  <div class="container--col">
+    <div class="container--row container--header">
+      <input type="checkbox"/>
+      <p>Title</p>
+      <p>Author</p>
+      <p>Date</p>
+    </div>
+    <div class="container--row" ng-repeat="article in admin.articles">
+      <input ng-model="article.checked" ng-change="admin.selectArticle($index)" type="checkbox"/>
+      <p class="text--main-color text--bold" ng-bind="article.title"></p>
+      <p class="text--main-color" ng-bind="article.author"></p>
+      <p class="text--main-color" ng-bind="article.creation_date | date:'dd/MM/yyyy @ HH:mm'"></p>
+    </div>
+  </div>
 </div>

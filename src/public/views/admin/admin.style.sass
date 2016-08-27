@@ -1,17 +1,70 @@
 @import '../../sass/colors'
 
-.admin-flex
-	display: flex
-	justify-content: center
-	align-items: center
-	.admin-content
-		min-width: 600px
-		min-height: 500px
-		margin-top: 50px
-		margin-bottom: 50px
-		border-radius: 20px
+$main-color: #2196f3
+
+.admin
+	background-color: white
+	width: auto
+	height: 100%
+	padding: 2rem
+
+	h2
+		font-size: 3rem
+		padding: 0 1rem 1rem 0
+
+	button[type="button"]
+		border: none
+		border-radius: 0.1rem
+		font-weight: bold
+		margin: 0 .5rem .5rem .5rem
+		padding: .3rem
+		width: 6rem
+
+	input[type="checkbox"]
+		margin-right: 1rem
+
+	.container--col
+		border: lightgrey solid 0.1rem
 		display: flex
+		height: 100%
 		flex-direction: column
-		justify-content: space-around
+		justify-content: space-between
+		width: auto
+
+		.container--row:nth-child(even)
+			background-color: #f1f1f1
+
+	.container--row
 		align-items: center
-		background-color: $bg-header
+		display: flex
+		flex-direction: row
+		height: 3rem
+		padding: 0.2rem 0.3rem
+		width: auto
+
+		p
+			flex-basis: 25%
+
+
+	.container--header
+		border-bottom: lightgrey solid 0.1rem
+		font-weight: 600
+		height: 2rem
+
+	.text--main-color
+		color: $main-color
+
+	.text--bold
+		font-weight: bold
+
+	.bg--main-color
+		background-color: $main-color
+		color: white
+
+	.bg--edition
+		background-color: #ff9800
+		color: white
+
+	.bg--warning
+		background-color: #f44336
+		color: white

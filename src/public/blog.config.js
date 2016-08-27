@@ -21,7 +21,7 @@ angular
 				controller: 'SignupCtrl',
 				controllerAs: 'signup'
 			})
-			.when('/admin', {
+			.when('/users/admin', {
 				templateUrl: './views/admin.html',
 				controller: 'AdminCtrl',
 				controllerAs: 'admin'
