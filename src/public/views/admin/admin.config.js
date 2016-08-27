@@ -1,3 +1,3 @@
 'use strict';
 
-import home_style from './home.style.sass';
+import admin_style from './admin.style.sass';

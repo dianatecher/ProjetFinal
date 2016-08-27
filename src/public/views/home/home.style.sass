@@ -1,0 +1,174 @@
+@import '../../sass/colors'
+
+.home
+	a:visited
+		color:red
+	h2
+		font-size: 1.3em
+		font-weight: 700
+	h6
+		font-size: 0.8em
+		margin: 10px auto
+	h3
+		font-weight: 700
+	a
+		color: black
+
+
+	.container
+		display: flex
+		width: 100%
+		height: auto
+
+		.container-left
+			display: flex
+			flex-direction: column
+			width: 45%
+			margin: 10px
+			border-radius: 3pt
+			background-color: $bg-article
+			border: 2px solid #95A5A6
+			padding: 10px
+			// &:focus
+			// 	.list-article
+			// 		background-color: red
+
+			.list-article
+				display: flex
+				height: 12%
+				margin-top: 25px
+				padding: 10px
+				overflow: hidden
+				border: 2px solid grey
+
+
+				.container-left-img
+					width: 200px
+					height: 150px
+
+					img
+						width: 200px
+						height: 200px
+
+			.container-left-text
+				overflow: hidden
+				line-height: 20px
+				margin-bottom: 15px
+				padding-left: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					// PARTIE RIGHT
+
+
+		.container-right
+			display: flex
+			flex-direction: column
+			width: 60%
+
+			h2
+				font-size: 1.3em
+				font-weight: 700
+				text-align: center
+
+			margin: 10px
+			border-radius: 3pt
+			background-color: $bg-article
+			border: 2px solid #95A5A6
+			padding: 10px
+
+		.nav-icon
+			display: flex
+			justify-content: space-around
+
+			a
+				font-size: 1.2em
+				margin-top: 10px
+
+
+				span
+					font-weight: 700
+
+
+		.container-right-img
+			display: flex
+			justify-content: center
+			// width: 600px
+			// height: 350px
+			// border: 2px solid red
+
+			h6
+				margin-right: 20px
+
+		.container-right-text
+			display: flex
+			justify-content: center
+			text-align: left
+			margin: 50px 30px
+			line-height: 20px
+
+		.nav-comment
+			display: flex
+
+			p
+				margin-right: 40px
+
+
+
+
+
+		// PARTIE COMMENT
+		.nav-comment
+			display: flex
+			justify-content: center
+			h2
+				margin: auto
+			a
+				margin-right: 100px
+				font-size: 1.3em
+				font-weight: 700
+
+		.all-comment
+			display: flex
+			flex-direction: column
+
+			.one-comment
+				display: flex
+				margin-bottom: 20px
+				padding: 5px
+
+				.one-comment-avatar
+					img
+						border-radius: 10%
+						margin: 5px
+				.one-comment-text
+					margin: 5px
+
+			.entry-comment
+				form
+					width: 80%
+					display: flex
+					flex-direction: column
+
+					textarea
+						resize: none
+						border-radius: 5px
+
+
+

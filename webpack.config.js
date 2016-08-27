@@ -24,7 +24,13 @@ module.exports = (function makeWebpackConfig() {
 			'./src/public/blog.controller.js',
 			'./src/public/blog.config.js',
 			'./src/public/views/home/home.controller.js',
-			'./src/public/views/home/home.config.js'
+			'./src/public/views/home/home.config.js',
+			'./src/public/views/login/login.controller.js',
+			'./src/public/views/login/login.config.js',
+			'./src/public/views/signup/signup.controller.js',
+			'./src/public/views/signup/signup.config.js',
+			'./src/public/views/admin/admin.controller.js',
+			'./src/public/views/admin/admin.config.js'
 		]
 	};
 
@@ -74,12 +80,30 @@ module.exports = (function makeWebpackConfig() {
 			new HtmlWebpackPlugin({
 				template: './src/public/index.html',
 				filename: 'index.html',
-				inject: 'head',
+				inject: 'body',
 				chunks: ['blog']
 			}),
 			new HtmlWebpackPlugin({
 				template: './src/public/views/home/home.html',
 				filename: 'views/home.html',
+				inject: 'false',
+				chunks: []
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/views/login/login.html',
+				filename: 'views/login.html',
+				inject: 'false',
+				chunks: []
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/views/signup/signup.html',
+				filename: 'views/signup.html',
+				inject: 'false',
+				chunks: []
+			}),
+			new HtmlWebpackPlugin({
+				template: './src/public/views/admin/admin.html',
+				filename: 'views/admin.html',
 				inject: 'false',
 				chunks: []
 			}),
@@ -91,13 +115,13 @@ module.exports = (function makeWebpackConfig() {
 		);
 	}
 
-	if (isProd) {
+/*	if (isProd) {
 		config.plugins.push(
 			new webpack.NoErrorsPlugin(),
 			new webpack.optimize.DedupePlugin(),
 			new webpack.optimize.UglifyJsPlugin()
 		);
 	}
-
+*/
 	return config;
 })();

@@ -1,8 +1,7 @@
 angular
 	.module('blog')
-	.controller('HomeCtrl', HomeCtrl);
+	.controller('AdminCtrl', AdminCtrl);
 
-function HomeCtrl() {
+function AdminCtrl() {
 	const vm = this;
-
 }
