@@ -1,23 +1,31 @@
 
 <div class="admin">
-  <div class="container--row">
+  <div class="container--row" ng-hide="admin.edit_mode">
     <h2>Posts</h2>
-    <button class="bg--main-color" type="button">Add New</button>
-    <button class="bg--edition" type="button">Edit</button>
-    <button class="bg--warning" type="button">Delete</button>
+    <button class="bg--main-color" ng-click="admin.addArticle()" type="button">Add New</button>
+    <button class="bg--edition" ng-click="admin.editArticle()" ng-show="admin.selectedArticles.length === 1" type="button">Edit</button>
+    <button class="bg--warning" ng-click="admin.deleteArticle()" ng-show="admin.selectedArticles.length &gt; 0" type="button">Delete</button>
+  </div>
+  <div class="container--row" ng-show="admin.edit_mode">
+    <h2 ng-bind="admin.edit_title"></h2>
   </div>
   <div class="container--col">
-    <div class="container--row container--header">
+    <div class="container--row container--header" ng-hide="admin.edit_mode">
       <input type="checkbox"/>
       <p>Title</p>
       <p>Author</p>
       <p>Date</p>
     </div>
-    <div class="container--row" ng-repeat="article in admin.articles">
+    <div class="container--row" ng-repeat="article in admin.articles" ng-hide="admin.edit_mode">
       <input ng-model="article.checked" ng-change="admin.selectArticle($index)" type="checkbox"/>
       <p class="text--main-color text--bold" ng-bind="article.title"></p>
       <p class="text--main-color" ng-bind="article.author"></p>
       <p class="text--main-color" ng-bind="article.creation_date | date:'dd/MM/yyyy @ HH:mm'"></p>
     </div>
+    <form name="admin.myForm" ng-show="admin.edit_mode" ng-submit="admin.submitArticle()">
+      <input ng-model="admin.newArticle.title" placeholder="Enter title here" required="required" type="text"/>
+      <textarea ng-model="admin.newArticle.content" required="required"></textarea>
+      <input type="submit" value="Submit"/>
+    </form>
   </div>
 </div>

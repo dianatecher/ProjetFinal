@@ -29,12 +29,14 @@ router.param('article', function (req, res, next, id) {
 /* Create a new article */
 router.post('/api/articles', function (req, res, next) {
 	const article = new Article(req.body);
+	console.log(article);
 
 	article.save(function (err, article) {
 		if (err) {
+			console.log(err);
 			return next(err);
 		}
-
+		console.log(article + " success");
 		return res.json(article);
 	});
 });
