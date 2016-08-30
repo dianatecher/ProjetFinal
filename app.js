@@ -12,7 +12,7 @@ const viewsPath = `${path}/views`;
 const mongoose = require('mongoose');
 require('./models/Articles');
 require('./models/Users');
-mongoose.connect('mongodb://localhost/blog');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/blog');
 
 
 const routes = require('./routes/index');
