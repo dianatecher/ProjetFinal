@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf ./dist/public && webpack --progress --profile",
     "webpack-server": "webpack-dev-server --watch --hot --history-api-fallback --inline --progress",
-    "start": "nodemon ./bin/www",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jeremNoel, WOLFSilverWolf, Shinji, dianatecher",
